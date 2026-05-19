@@ -1,0 +1,1 @@
+this repository contains all of the work i've done to complete the lab assignments provided as part of freecodecamp's recommended curriculum aimed at instructing students to become proficient in coding.
