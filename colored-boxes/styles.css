@@ -1,0 +1,39 @@
+body {
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+.color-grid {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
+.color-box {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+}
+
+.color1 {
+    background-color: #edafb8;
+}
+
+.color2 {
+    background-color: rgb(191, 160, 209);
+}
+
+.color3 {
+    background-color: moccasin;
+}
+
+.color4 {
+    background-color: hsl(32, 33%, 67%);
+}
+
+.color5 {
+    background-color: rgba(173, 193, 120, 0.6);
+}

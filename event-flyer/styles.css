@@ -1,0 +1,23 @@
+body {
+    min-height: calc(100vh - 100px);
+    width: 70vw;
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: lavender;
+}
+
+header {
+    text-align: center;
+}
+
+#header-pic {
+    max-width: 40%;
+}
+
+hr {
+    width: 45%;
+}
+
+section {
+    width: 50%;
+}

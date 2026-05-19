@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Job Application Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Mighty Industries IT Job Application Form</h1>
+        <form action="">
+            <fieldset class="contact-info">
+                <legend>Applicant Information</legend>
+                <label for="name">First and Last Name: </label>
+                <input type="text" id="name" placeholder="e.g. Jane Doe, John Doe, etc." required>
+                <label for="email">Email Address: </label>
+                <input type="email" id="email" placeholder="jane@example.com" required>
+            </fieldset>
+
+            <fieldset class="preferences">
+                <legend>IT Position Preferences</legend>
+                <label for="position">Here at Mighty Industries, we recognize that applicants may take a liking to more than one available job opening. In the event that it appears an applicant's profile better suits one position over another, we will adjust their process accordingly. That being said, which position are you <em><strong>most</strong></em> interested in applying for?</label>
+                
+                <select name="job-position" id="position">
+                    <option value="ui">UI Designer</option>
+                    <option value="ux">UX Designer</option>
+                    <option value="se">Software Engineer</option>
+                    <option value="web">Web Developer</option>
+                    <option value="proj">Project Manager</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="radio-group">
+                <legend>What is your preferred schedule of availability?</legend>
+                <input type="radio" id="full-time" name="availability" value="full-time">
+                <label for="full-time" class="availability">Full-Time</label>
+                <input type="radio" id="part-time" name="availability" value="part-time">
+                <label for="part-time" class="availability">Part-Time</label>
+            </fieldset>
+
+            <fieldset class="short-answer">
+                <label for="message">Why do you want to work at Mighty Industries?</label>
+                <textarea name="" id="message" rows="10" cols="50" required></textarea>
+            </fieldset>
+
+            <button class="submit-button" type="submit">SUBMIT APPLICATION</button>
+        </form>
+    </div>
+</body>
+</html>

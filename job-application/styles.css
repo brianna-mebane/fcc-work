@@ -1,0 +1,76 @@
+body {
+    background-color: #b2967d;
+}
+
+.container {
+    background-color: #e6beae4a;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+fieldset {
+    padding: 20px auto;
+    margin: 10px;
+}
+
+label:not(.availability) {
+    display: block;
+    margin: 10px 0;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.preferences label {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+input:focus, textarea:focus {
+    border: 3px solid orange;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+    border: 3px solid red;
+}
+
+input:valid, select:valid, textarea:valid {
+    border: 3px solid green;
+}
+
+button {
+    padding: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #b2967d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #a9896d;
+}
+
+.radio-group input[type="radio"]:checked {
+    background-color: orange;
+    border: 2px solid orange;
+    box-shadow: 0 0 5px 3px #FFA500;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    box-shadow: 10px -10px -10px darkgray;
+    color: #804d4d;
+}
+
+input:first-of-type {
+    color: whitesmoke;
+}

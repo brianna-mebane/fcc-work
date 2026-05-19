@@ -1,0 +1,27 @@
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sub-item-link:link {
+    color: hotpink;
+}
+
+.sub-item-link:visited {
+    color: mediumvioletred;
+}
+
+.sub-item-link:hover {
+    color: chocolate;
+}
+
+.sub-item-link:focus {
+    outline: 3px solid tomato;
+}
+
+.sub-item-link:active {
+    color: teal;
+}

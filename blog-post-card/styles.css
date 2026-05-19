@@ -1,0 +1,46 @@
+body {
+    background-color: palevioletred;
+}
+
+.blog-post-card {
+    background-color: white;
+    border-radius: 30px;
+    width: 350px;
+    text-align: center;
+
+}
+
+.post-img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 2px solid palevioletred; 
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.post-content {
+    padding: 12px 5px 30px 5px;
+}
+
+.post-title {
+    color: palevioletred;
+}
+
+.post-excerpt {
+    color: rgb(23, 23, 23);
+    padding-bottom: 12px;
+}
+
+.read-more {
+    background-color: palevioletred;
+    color: white;
+    padding: 11px;
+    border-radius: 11px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.read-more:hover {
+    background-color: mediumvioletred;
+}
