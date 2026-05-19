@@ -2,30 +2,82 @@ body {
     background-color: #CBE7EB; 
 }
 
+h1 {
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial;
+}
+
 #playing-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 100px auto;
 }
 
 .card {
     display: flex;
     justify-content: space-between;
     background-color: white;
-    height: 400px;
-    width: 275px;
+    height: 350px;
+    width: 260px;
     border-radius: 10px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border: 1.5px solid darkgrey;
+}
+
+.hearts, .diamonds {
+    color: red;
 }
 
 .left {
     align-self: flex-start;
 }
 
+.left p:first-of-type {
+    margin-top: 15px;
+    margin-bottom: -15px;
+}
+
+.left, .right p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-suits {
+    transform: translateY(85px);
+}
+
+.bottom-suits {
+    transform: translateY(-85px) rotate(180deg);
+}
+
+.clubs .top-suits {
+    transform: translateY(175px);
+}
+
+.clubs .bottom-suits {
+    transform: translateY(-175px) rotate(180deg);
+}
+
 .middle {
+    display: flex;
+    flex-direction: column;
     align-self: center;
+}
+
+.middle p {
+    font-size: 5rem;
 }
 
 .right {
     align-self: flex-end;
+    transform: rotate(180deg);
+}
+
+.right p:last-of-type {
+    margin-top: -15px;
+    margin-bottom: 15px;
 }
