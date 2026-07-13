@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    background-color: #ede0d4;
 }
 
 #header {
@@ -17,7 +18,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: rgb(130, 70, 70);
+    background-color: rgb(127, 85, 57, 0.85);
 }
 
 #header-img {
@@ -28,6 +29,7 @@ body {
     font-size: 2.4rem;
     letter-spacing: 3px;
     font-family: "DynaPuff", "Trebuchet MS", sans-serif;
+    color: rgb(241, 238, 238);
 }
 
 #nav-bar {
@@ -41,4 +43,5 @@ body {
     text-decoration: none;
     font-size: 1.2rem;
     letter-spacing: 2px;
+    color: rgb(241, 238, 238);
 }
