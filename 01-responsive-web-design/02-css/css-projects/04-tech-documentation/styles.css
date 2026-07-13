@@ -1,0 +1,41 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 1% 0 0 1%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #ffe4f3;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a, a:visited {
+    color: #6f0759;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 0 0 15%;
+    position: sticky;
+    top: 0;
+}
+
+#main-doc {
+    max-width: 80%;
+    flex: 0 0 85%;
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 18px;
+    }
+}
