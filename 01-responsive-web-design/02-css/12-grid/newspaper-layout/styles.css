@@ -1,3 +1,12 @@
+::root {
+    font-size: 12px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
 .newspaper-layout {
     display: grid;
     grid-template-areas: 
@@ -5,11 +14,27 @@
         "feature-article feature-article cover-image"
         "secondary-article secondary-article cover-image"
         "small-article1 small-article2 small-article3";
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 1.1rem;
+    max-width: 800px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.2;
 }
 
 .title {
     grid-area: title;
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
 }
 
 .feature-article {
@@ -18,10 +43,15 @@
 
 .cover-image {
     grid-area: cover-image;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-figure img {
-    width: 300px;
+.cover-image img {
+    width: 500px;
+    max-width: 100%;
 }
 
 .secondary-article {
