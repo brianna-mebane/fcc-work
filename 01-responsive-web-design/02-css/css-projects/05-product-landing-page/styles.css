@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-::root {
-    font-size: 14px;
+:root {
+    font-size: 16px;
+    --primary-color: rgb(127, 85, 57);
+    --secondary-color: #ede0d4;
 }
 
 body {
     margin: 0;
-    background-color: #ede0d4;
+    background-color: var(--secondary-color);
 }
 
 #header {
@@ -18,7 +20,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: #7f5539;
+    background-color: var(--primary-color);
 }
 
 #header-img {
@@ -29,7 +31,7 @@ body {
     font-size: 2.4rem;
     letter-spacing: 3px;
     font-family: "DynaPuff", "Trebuchet MS", sans-serif;
-    color: rgb(241, 238, 238);
+    color: var(--secondary-color);
 }
 
 #nav-bar {
@@ -72,7 +74,7 @@ body {
     gap: 100px;
     padding: 30px 50px;
     max-width: 100%;
-    background-color: rgb(127, 85, 57);
+    background-color: var(--primary-color);
 }
 
 .feature {
@@ -89,6 +91,59 @@ body {
     line-height: 1.5rem;
     letter-spacing: 1px;
     font-size: 1.2rem;
+}
+
+#pricing {
+    margin-top: 40px;
+}
+
+#pricing h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+}
+
+#prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 40px 20px;
+    place-items: center;
+}
+
+
+#price1, #price2, #price3 {
+    text-align: center;
+    border: 1.5px solid black;
+    width: 400px;
+}
+
+[id*="price"] h3 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+
+[id*="price"] h4 {
+    font-size: 1.1rem;
+}
+
+.cost {
+    font-size: 1.8rem;
+    letter-spacing: 1.2px;
+}
+
+[id*="price"] ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
 footer {
