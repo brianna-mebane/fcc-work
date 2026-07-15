@@ -15,13 +15,12 @@
         <img src="./assets/images/small-ramen.png" alt="drawing of hot ramen with chopsticks" id="header-img">
         <h1 id="brand">Ramen Noodle Dreams</h1>
         <nav id="nav-bar">
-            <a href="#hero" class="nav-link">Home</a>
+            <a href="#home" class="nav-link">Home</a>
             <a href="#features" class="nav-link">Features</a>
-            <a href=#pricing" class="nav-link">Pricing</a>
-            <a href="" class="nav-link">Inquiries</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
         </nav>
     </header>
-    <section id="hero">
+    <section id="home">
         <h2>Instant Noodles. Infinite Dreams.</h2>
         <p>No chefs. No reservations. Just premium noodles, questionable sodium levels, and absolute flavor bliss shipped straight to your doorstep.</p>
         <iframe id="video" src="https://www.youtube.com/watch?v=Ff11NSK8q20" frameborder="0" width="600" height="400"></iframe>
@@ -76,7 +75,11 @@
         </div>
     </section>
     <footer>
-        <p>This landing page was created by Brianna Mebane.</p>
+        <form id="form" action="https://www.freecodecamp.org/email-submit">
+            <label for="email">Join our mailing list to receive 15% off your first month!</label>
+            <input type="email" id="email" name="email" placeholder="janedoe@email.com">
+            <input type="submit" id="submit" value="SUBMIT">
+        </form>
     </footer>
 </body>
 </html>

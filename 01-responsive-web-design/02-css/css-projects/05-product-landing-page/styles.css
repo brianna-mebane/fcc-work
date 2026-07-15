@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=DynaPuff:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
     font-size: 16px;
@@ -9,6 +9,8 @@
 body {
     margin: 0;
     background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
 }
 
 #header {
@@ -48,7 +50,7 @@ body {
     color: rgb(241, 238, 238);
 }
 
-#hero {
+#home {
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -58,13 +60,17 @@ body {
     margin-bottom: 50px;
 }
 
-#hero h2 {
-    font-size: 2rem;
+#home h2 {
+    font-size: 2.2rem;
+    font-family: "Coiny", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
 }
 
-#hero p {
+#home p {
     margin-bottom: 40px;
     font-size: 1.3rem;
+    font-family: "Nunito", sans-serif;
 }
 
 #features {
@@ -93,6 +99,7 @@ body {
     line-height: 1.5rem;
     letter-spacing: 1.5px;
     font-size: 1.2rem;
+    font-family: "Nunito", sans-serif;
 }
 
 #pricing {
@@ -104,6 +111,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     letter-spacing: 3px;
+    font-family: "Coiny", sans-serif;
 }
 
 #prices {
@@ -131,9 +139,14 @@ body {
     color: var(--secondary-color);
     margin-top: 0;
     padding: 15px 0;
+    font-family: "Coiny", sans-serif;
 }
 
 [id*="price"] h4 {
+    font-size: 1.1rem;
+}
+
+[id*="price"] li {
     font-size: 1.1rem;
 }
 
@@ -160,5 +173,36 @@ body {
 }
 
 footer {
-    bottom: 0;
+    background-color: var(--primary-color);
+    padding-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid brown;
+    gap: 20px;
+}
+
+label {
+    font-size: 2rem;
+    font-family: "Coiny", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+}
+
+#email {
+    width: 400px;
+    height: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@media (width < 800px) {
+    :root {
+        --primary-color: #ee8e4e;
+    }
 }
