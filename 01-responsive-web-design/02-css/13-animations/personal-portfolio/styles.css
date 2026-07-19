@@ -31,6 +31,11 @@ header {
     gap: 20px;
 }
 
+a, a:visited {
+    text-decoration: none;
+    color: var(--theme-color2);
+}
+
 li {
     list-style-type: none;
     margin: 0;
