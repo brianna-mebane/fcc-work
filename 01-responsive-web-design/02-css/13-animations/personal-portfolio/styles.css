@@ -1,0 +1,42 @@
+:root {
+    font-size: 14px;
+    --theme-color1: #a2d2ff;
+    --theme-color2: #173F54;
+}
+
+body {
+    background-color: var(--theme-color1);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 2px solid var(--theme-color2);
+}
+
+#name {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    color: var(--theme-color2);
+}
+
+#links {
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--theme-color2);
+    font-weight: 600;
+}
