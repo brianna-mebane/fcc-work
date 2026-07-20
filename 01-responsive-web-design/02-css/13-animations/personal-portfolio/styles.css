@@ -108,6 +108,33 @@ h3 {
     width: 400px;
 }
 
-#contact-info {
+footer {
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid var(--theme-color2);
     background-color: var(--theme-color2);
+}
+
+.fa-brands {
+    font-size: 3rem;
+    color: var(--theme-color1);
+}
+
+@media screen and (max-width: 402px) {
+    :root {
+        font-size: 10px;
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    #projects {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
