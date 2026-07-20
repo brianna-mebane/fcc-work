@@ -18,6 +18,10 @@ header {
     align-items: center;
     padding: 15px 30px;
     border-bottom: 2px solid var(--theme-color2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--theme-color1);
 }
 
 #name {
@@ -45,19 +49,15 @@ li {
     font-weight: 600;
 }
 
-#welcome-section {
+section {
     padding: 15px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 2px solid var(--theme-color2);
-    border-right: 2px solid var(--theme-color2);
-    margin-left: 100px;
-    margin-right: 100px;
 }
 
-#about {
-    padding-top: 30px;
+section h1, h2 {
+    padding-top: 20px;
     text-transform: uppercase;
     font-size: 2.5rem;
     letter-spacing: 0.4rem;
@@ -69,8 +69,10 @@ li {
     display: flex;
     flex-direction: column;
     gap: -1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--theme-color2);
 }
 
 .bio p {
@@ -79,6 +81,29 @@ li {
     line-height: 1.8rem;
 }
 
-.project-section {
-    border-top: 2px solid var(--theme-color2);
+#project-section {
+    padding-bottom: 50px;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.project-tile {
+    border: 2px solid var(--theme-color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--theme-color1);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.project-tile img {
+    width: 400px;
 }
