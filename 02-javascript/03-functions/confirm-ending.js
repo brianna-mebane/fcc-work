@@ -5,12 +5,3 @@ function confirmEnding(str1, str2) {
         return true;
     } else return false;
 }
-
-const result1 = confirmEnding("Bastian", "n");
-console.log(result1);
-
-const result2 = confirmEnding("Congratulation", "on");
-console.log(result2);
-
-const result3 = confirmEnding("Bastian", "n");
-console.log(result3);
