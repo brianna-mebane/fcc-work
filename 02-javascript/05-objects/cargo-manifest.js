@@ -52,5 +52,15 @@ function validateManifest(manifest) {
 }
 
 function processManifest(manifest) {
+    const valCheck = validateManifest(manifest);
+
+    if (Object.keys(valCheck).length > 0) {
+        console.log(`Validation error: ${manifest.containerId}`);
+        console.log(valCheck);
+    } else {
+        const normalizedManifest = normalizeUnits(manifest);
+        console.log(`Validation success: ${manifest.containerId}`);
+        console.log(`Total weight: ${normalizedManifest.weight} kg`);
+    }
 
 }
