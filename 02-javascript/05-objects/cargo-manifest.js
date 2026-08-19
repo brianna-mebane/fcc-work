@@ -32,7 +32,7 @@ function validateManifest(manifest) {
 
     if (manifest.hasOwnProperty("weight") == false) {
         newManifest.weight = "Missing";
-    } else if (typeof manifest.weight != "number" || Number.isNaN(manifest.weight) || manifest.weight < 0) {
+    } else if (typeof manifest.weight != "number" || Number.isNaN(manifest.weight) || manifest.weight <= 0) {
         newManifest.weight = "Invalid";
     }
 
