@@ -35,14 +35,20 @@ const question5 = {
 
 const questions = [question1, question2, question3, question4, question5];
 
-function getRandomQuestion(questions) {
-    const randomNum = Math.floor(Math.random() * questions.length);
+function getRandomQuestion(questionBank) {
+    const randomNum = Math.floor(Math.random() * questionBank.length);
 
-    return questions[randomNum];
+    return questionBank[randomNum];
 }
 
 function getRandomComputerChoice(options) {
     const randomNum = Math.floor(Math.random() * options.length);
 
     return options[randomNum];
+}
+
+function getResults(obj, computerAnswer) {
+  if (computerAnswer === obj.answer) {
+    return "The computer's choice is correct!";
+  } else return `The computer's choice is wrong. The correct answer is: ${obj.answer}`;
 }
