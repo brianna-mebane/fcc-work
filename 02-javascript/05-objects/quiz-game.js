@@ -40,3 +40,9 @@ function getRandomQuestion(questions) {
 
     return questions[randomNum];
 }
+
+function getRandomComputerChoice(options) {
+    const randomNum = Math.floor(Math.random() * options.length);
+
+    return options[randomNum];
+}
