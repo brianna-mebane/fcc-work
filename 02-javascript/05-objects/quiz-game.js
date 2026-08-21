@@ -1,5 +1,3 @@
-const questions = [question1, question2, question3, question4, question5];
-
 const question1 = {
     category: "Sports",
     question: "In what year did the NBA get its official name?",
@@ -33,4 +31,12 @@ const question5 = {
     question: "Which album is NOT a record released by Janet Jackson?",
     choices: ["The Velvet Rope", "Rhythm Nation", "CTRL"],
     answer: "CTRL"
+}
+
+const questions = [question1, question2, question3, question4, question5];
+
+function getRandomQuestion(questions) {
+    const randomNum = Math.floor(Math.random() * questions.length);
+
+    return questions[randomNum];
 }
