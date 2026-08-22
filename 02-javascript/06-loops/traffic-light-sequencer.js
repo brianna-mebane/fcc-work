@@ -63,3 +63,30 @@ function runSequence(config, cycles) {
 // runSequence(config2, 1);
 // runSequence(config3, 2);
 // runSequence(config4, 5);
+
+function generateTimeline(config, cycles) {
+  const timeSlip = [];
+  const phases = config.phases;
+  let time = 0;
+
+
+  let cycleCounter = 0;
+  while (cycleCounter < cycles) {
+    let i = 0;
+    while (i < phases.length) {
+      time += phases[i].duration;
+      timeSlip.push(time);
+  
+      i += 1;
+    }
+    cycleCounter += 1;
+  }
+
+  return timeSlip;
+}
+
+// generateTimeline(config1, 1);
+// generateTimeline(config1, 2);
+// generateTimeline(config2, 1);
+// generateTimeline(config3, 2);
+// generateTimeline(config4, 5);
