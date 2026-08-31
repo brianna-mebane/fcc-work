@@ -13,3 +13,15 @@ function isPalindrome(word) {
 
     return true;
 }
+
+function findPalindromeBreaks(words) {
+    const breaks = [];
+
+    for (let i = 0; i < words.length; i++) {
+        if (!isPalindrome(words[i])) {
+            breaks.push(i);
+        }
+    }
+
+    return breaks;
+}
