@@ -60,13 +60,28 @@ function planRestock(pantry, shipment) {
       type = "donate";
     }
 
-    actions.push({
-      type: type,
-      item: order.name
-    });
+    actions.push({ type: type, item: order });
   }
 
   return actions;
+}
+
+function groupByZone(actions) {
+  const zonedActions = {};
+
+  for (const action of actions) {
+
+    const zone = action.item.zone;
+
+    if (!zonedActions[zone]) {
+      zonedActions[zone] = [];
+    }
+
+    zonedActions[zone].push(action);
+  }
+
+  return zonedActions;
+
 }
 
 function clonePantry(pantry) {
