@@ -40,3 +40,31 @@ function parseShipment(rawData) {
 
   return shipment;
 }
+
+function planRestock(pantry, shipment) {
+  const pantrySKUs = [];
+  const actions = [];
+
+  for (let food of pantry) {
+    pantrySKUs.push(food.sku);
+  }
+
+  for (let order of shipment) {
+    let type = "";
+
+    if (order.qty <= 0) {
+      type = "discard";
+    } else if (pantrySKUs.includes(order.sku)) {
+      type = "restock";
+    } else {
+      type = "donate";
+    }
+
+    actions.push({
+      type: type,
+      item: order.name
+    });
+  }
+
+  return actions;
+}
