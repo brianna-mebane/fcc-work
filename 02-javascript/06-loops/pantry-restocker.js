@@ -68,3 +68,19 @@ function planRestock(pantry, shipment) {
 
   return actions;
 }
+
+function clonePantry(pantry) {
+  const newPantry = [];
+
+  for (let item of pantry) {
+    newPantry.push({
+      sku: item.sku,
+      name: item.name,
+      qty: item.qty,
+      expires: item.expires,
+      zone: item.zone
+    });
+  }
+
+  return newPantry;
+}
