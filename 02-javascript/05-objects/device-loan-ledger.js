@@ -15,12 +15,25 @@ function checkoutDevice(ledger, assetTag, borrower) {
     updatedLedger[assetTag].status = "CheckedOut";
     updatedLedger[assetTag].borrower.name = borrower.name;
     updatedLedger[assetTag].borrower.email = borrower.email;
-    const confirmationMessage = `${updatedLedger[assetTag].type} with the asset tag ${assetTag} has been checked out by ${borrower.name}.`;
+    const confirmationMessage = `Device with the asset tag ${assetTag} has been checked out by ${borrower.name}.`;
     return { ledger: updatedLedger, message: confirmationMessage };
   }
 }
 
 function checkinDevice(ledger, assetTag) {
+  if (!(ledger.hasOwnProperty(assetTag))) {
+    return { ledger, message: `${assetTag} not found in the ledger.`};
+  } else {
+    const updatedLedger = JSON.parse(JSON.stringify(ledger));
+    updatedLedger[assetTag].borrower.name = "";
+    updatedLedger[assetTag].borrower.email = "";
+    updatedLedger[assetTag].dueDate = "";
+    updatedLedger[assetTag].status = "CheckedIn";
+
+    const confirmationMessage = `Device with the asset tag ${assetTag} has been checked in.`;
+
+    return { ledger: updatedLedger, message: confirmationMessage};
+  }
 
 }
 
