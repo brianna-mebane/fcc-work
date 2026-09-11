@@ -34,11 +34,36 @@ function checkinDevice(ledger, assetTag) {
 
     return { ledger: updatedLedger, message: confirmationMessage};
   }
+}
 
+function fixDate(date) {
+  const dateInfo = date.split("/");
+  const month = dateInfo[0];
+  const day = dateInfo[1];
+  const year = dateInfo[2];
+
+  month.padStart(2, "0");
+  day.padStart(2, "0");
+
+  const newDate = year + month + day;
+
+  return parseInt(newDate, 10);
 }
 
 function listOverdueDevices(ledger, today) {
+  const overdueDevices = [];
+  const todaysDate = fixDate(today);
 
+  for (const assetTag in ledger) {
+    const device = ledger[assetTag];
+    if (device.status === "CheckedOut" && Object.hasOwn(device, 'dueDate')) {
+      if (fixDate(device.dueDate) < todaysDate) {
+        overdueDevices.push(device);
+      }
+    }
+  }
+
+  return overdueDevices.sort((x, y) => fixDate(x.dueDate) - fixDate(y.dueDate));
 }
 
 function serializeLedger(ledger) {
