@@ -104,3 +104,24 @@ function dedupeFragments(fragments) {
 }
 
 const dedupedFragments = dedupeFragments(sortedFragments);
+
+function fillMissingFragments(fragments) {
+  const frags = JSON.parse(JSON.stringify(fragments));
+
+  for (let i = 0; i < frags.length; i++) {
+    if (frags[i].id !== i + 1) {
+      const placeholder = {
+        id: i + 1,
+        text: "[...]",
+      };
+      console.log(
+        `[FILLED] Placeholder fragment added for id ${placeholder.id}.`,
+      );
+      frags.splice(i, 0, placeholder);
+    }
+  }
+
+  return frags;
+}
+
+const filledFragments = fillMissingFragments(dedupedFragments);
