@@ -86,3 +86,21 @@ function sortFragments(fragments) {
 }
 
 const sortedFragments = sortFragments(compactedShuffledFragments);
+
+function dedupeFragments(fragments) {
+  const noDupes = [];
+  const uniqueIds = [];
+
+  for (const frag of fragments) {
+    if (!uniqueIds.includes(frag.id)) {
+      noDupes.push(frag);
+      uniqueIds.push(frag.id);
+    } else {
+      console.log(`[DEDUPED] Duplicate fragment found at id ${frag.id}.`);
+    }
+  }
+
+  return noDupes;
+}
+
+const dedupedFragments = dedupeFragments(sortedFragments);
