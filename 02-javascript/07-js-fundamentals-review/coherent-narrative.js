@@ -45,11 +45,19 @@ function compactFragments(fragments) {
     allFilledIn.push(fragment);
   }
 
+  let blanks = 0;
+
   for (let i = 0; i < allFilledIn.length; i++) {
     if (allFilledIn[i] === undefined) {
-      console.log(`[COMPACTED] Story fragment at index ${i} has been removed.`);
+      blanks++;
       allFilledIn.splice(i, 1);
     }
+  }
+
+  if (blanks > 0) {
+    console.log(
+      `[COMPACTED] ${blanks} undefined fragments have been removed from the array.`,
+    );
   }
 
   return allFilledIn;
