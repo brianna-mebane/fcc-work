@@ -115,7 +115,7 @@ function fillMissingFragments(fragments) {
         text: "[...]",
       };
       console.log(
-        `[FILLED] Placeholder fragment added for id ${placeholder.id}.`,
+        `[FILLED] Placeholder fragment added with id ${placeholder.id}.`,
       );
       frags.splice(i, 0, placeholder);
     }
@@ -125,3 +125,19 @@ function fillMissingFragments(fragments) {
 }
 
 const filledFragments = fillMissingFragments(dedupedFragments);
+
+function assembleStory(fragments) {
+  let fullStory = "";
+
+  for (const fragment of fragments) {
+    if (fragments.indexOf(fragment) === fragments.length - 1) {
+      fullStory += fragment.text;
+    } else {
+      fullStory += fragment.text + "\n";
+    }
+  }
+
+  return fullStory;
+}
+
+console.log(assembleStory(filledFragments));
