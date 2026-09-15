@@ -54,3 +54,5 @@ function compactFragments(fragments) {
 
   return allFilledIn;
 }
+
+const compactedShuffledFragments = compactFragments(shuffledFragments);
