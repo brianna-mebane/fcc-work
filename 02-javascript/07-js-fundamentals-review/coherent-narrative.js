@@ -64,3 +64,25 @@ function compactFragments(fragments) {
 }
 
 const compactedShuffledFragments = compactFragments(shuffledFragments);
+
+function sortFragments(fragments) {
+  const sortedFrags = JSON.parse(JSON.stringify(fragments));
+
+  for (let i = 0; i < sortedFrags.length; i++) {
+    let minIndex = i;
+
+    for (let j = i + 1; j < sortedFrags.length; j++) {
+      if (sortedFrags[minIndex].id > sortedFrags[j].id) {
+        minIndex = j;
+      }
+    }
+
+    const temp = sortedFrags[i];
+    sortedFrags[i] = sortedFrags[minIndex];
+    sortedFrags[minIndex] = temp;
+  }
+
+  return sortedFrags;
+}
+
+const sortedFragments = sortFragments(compactedShuffledFragments);
