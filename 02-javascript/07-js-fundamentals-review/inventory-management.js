@@ -1,10 +1,10 @@
 const inventory = [];
 
-function findProductIndex(product) {
-  product = product.toLowerCase();
+function findProductIndex(productName) {
+  productName = productName.toLowerCase();
 
   for (const item of inventory) {
-    if (item.name === product) {
+    if (item.name === productName) {
       return inventory.indexOf(item);
     }
   }
