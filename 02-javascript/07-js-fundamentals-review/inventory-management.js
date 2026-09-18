@@ -11,3 +11,22 @@ function findProductIndex(productName) {
 
   return -1;
 }
+
+function addProduct(product) {
+  product.name = product["name"].toLowerCase();
+  let found = false;
+
+  for (const item of inventory) {
+    if (item.name === product.name) {
+      item.quantity += product.quantity;
+      console.log(`${product.name} quantity updated`);
+      found = true;
+      break;
+    }
+  }
+  
+  if (found === false) {
+    inventory.push(product);
+    console.log(`${product.name} added to inventory`);
+  }
+}
