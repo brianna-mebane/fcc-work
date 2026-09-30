@@ -67,3 +67,17 @@ function scoreTracks(tracks) {
 
   return tracks;
 }
+
+function deDupeTracks(tracks) {
+  const noDupes = [];
+  const uniqueTrackIds = [];
+
+  for (const track of tracks) {
+    if (!uniqueTrackIds.includes(track.trackId)) {
+      noDupes.push(track);
+      uniqueTrackIds.push(track.trackId);
+    }
+  }
+
+  return noDupes;
+}
