@@ -105,3 +105,24 @@ function enforceArtistQuota(tracks, maxPerArtist) {
 
   return cleanPlaylist;
 }
+
+function buildSchedule(tracks) {
+  const schedule = [];
+
+  for (let i = 0; i < tracks.length; i++) {
+    const entry = { slot: i + 1, trackId: tracks[i].trackId };
+    schedule.push(entry);
+  }
+
+  return schedule;
+}
+
+function remixPlaylist(playlists, maxPerArtist) {
+  const tracks = flattenPlaylists(playlists);
+  const scoredTracks = scoreTracks(tracks);
+  const uniqueTracks = dedupeTracks(scoredTracks);
+  const cleanTracks = enforceArtistQuota(uniqueTracks, maxPerArtist);
+  const scheduledTracks = buildSchedule(cleanTracks);
+
+  return scheduledTracks;
+}
