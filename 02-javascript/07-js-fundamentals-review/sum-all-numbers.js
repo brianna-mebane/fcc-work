@@ -1,13 +1,9 @@
 function sumAll(arr) {
+  const max = Math.max(arr[0], arr[1]);
+  const min = Math.min(arr[0], arr[1]);
   let sum = 0;
 
-  if (arr[1] < arr[0]) {
-    const temp = arr[0];
-    arr[0] = arr[1];
-    arr[1] = temp;
-  }
-
-  for (let i = arr[0]; i <= arr[1]; i++) {
+  for (let i = min; i <= max; i++) {
     sum += i;
   }
 
