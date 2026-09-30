@@ -68,7 +68,7 @@ function scoreTracks(tracks) {
   return tracks;
 }
 
-function deDupeTracks(tracks) {
+function dedupeTracks(tracks) {
   const noDupes = [];
   const uniqueTrackIds = [];
 
@@ -80,4 +80,28 @@ function deDupeTracks(tracks) {
   }
 
   return noDupes;
+}
+
+function enforceArtistQuota(tracks, maxPerArtist) {
+  if (maxPerArtist < 1) {
+    return [];
+  }
+
+  const cleanPlaylist = [];
+  const artistCounts = {};
+
+  for (const track of tracks) {
+    const artist = track.artist;
+
+    if (artistCounts[artist] === undefined) {
+      artistCounts[artist] = 0;
+    }
+
+    if (artistCounts[artist] < maxPerArtist) {
+      cleanPlaylist.push(track);
+      artistCounts[artist] += 1;
+    }
+  }
+
+  return cleanPlaylist;
 }
