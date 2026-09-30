@@ -59,3 +59,11 @@ function flattenPlaylists(playlists) {
 
   return tracks;
 }
+
+function scoreTracks(tracks) {
+  for (const track of tracks) {
+    track.score = track.votes * 10 - Math.abs(track.bpm - 120);
+  }
+
+  return tracks;
+}
