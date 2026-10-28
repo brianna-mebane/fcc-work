@@ -10,7 +10,7 @@ function smallestCommons(arr) {
     nums.push(i);
   }
 
-  let lcm = max;
+  let lcm = min * max;
   let allDivisible = false;
 
   while (!allDivisible) {
@@ -20,8 +20,6 @@ function smallestCommons(arr) {
       return lcm;
     }
 
-    lcm += max;
+    lcm += min * max;
   }
 }
-
-console.log(smallestCommons([23, 18]));
